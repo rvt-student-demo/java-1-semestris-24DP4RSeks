@@ -2,7 +2,7 @@ package rvt;
 import java.util.Scanner;
 public class chapter_19 {
     public static void main(String[] args) {
-        ex6();
+        ex7();
     }
     public static void ex1() {
         Scanner scanner = new Scanner(System.in);
@@ -99,7 +99,17 @@ public class chapter_19 {
         }
         System.out.print(second);
     }
-
+    public static void ex7() {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Enter a word: ");
+        String word = String.valueOf(scanner.nextLine());
+        int count = word.length();
+        for (int i=0; i < count; i++){
+            char character = word.charAt(i);
+            System.out.println(character);
+        }
+    }
 
 
 }
