@@ -2,6 +2,12 @@ package rvt;
 import java.util.Scanner;
 public class chapter_19 {
     public static void main(String[] args) {
+        ex1();
+        ex2();
+        ex3();
+        ex4();
+        ex5();
+        ex6();
         ex7();
     }
     public static void ex1() {
