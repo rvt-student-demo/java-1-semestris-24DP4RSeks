@@ -85,7 +85,7 @@ public class chapter_19 {
         String inputString = String.valueOf(scanner.nextLine());
         System.out.println();
         int times = inputString.length();
-        for (int i = 0; i < times+1; i++){
+        for (int i = 0; i < times; i++){
             System.out.println(inputString);
         }
 
@@ -103,7 +103,7 @@ public class chapter_19 {
         for (int i = 1; i <= 30-sum; i++){
             System.out.print(".");
         }
-        System.out.print(second);
+        System.out.println(second);
     }
     public static void ex7() {
         Scanner scanner = new Scanner(System.in);
