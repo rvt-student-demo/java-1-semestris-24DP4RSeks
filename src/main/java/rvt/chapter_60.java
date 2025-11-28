@@ -1,6 +1,6 @@
 package rvt;
 
-public class chapter_60 {
+public class Chapter_60 {
     public static void main(String[] args) {
         Exercise1();
         Exercise2();
