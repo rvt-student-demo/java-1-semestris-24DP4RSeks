@@ -1,7 +1,7 @@
 package rvt;
 import java.util.Scanner;
 
-public class grades {
+public class GradesAndPoints {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
 
