@@ -1,6 +1,6 @@
 package rvt;
 import java.util.Scanner;
-public class chapter_19 {
+public class Chapter_19 {
     public static void main(String[] args) {
         ex1();
         ex2();
