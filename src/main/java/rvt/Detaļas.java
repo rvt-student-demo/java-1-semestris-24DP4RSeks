@@ -1,7 +1,7 @@
 package rvt;
 import java.util.Scanner;
 
-public class bobdiscount {
+public class Detaļas {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
