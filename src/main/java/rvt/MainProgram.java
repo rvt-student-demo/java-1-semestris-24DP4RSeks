@@ -1,15 +1,31 @@
 package rvt;
-
 public class MainProgram {
     public static void main(String[] args) {
-        PaymentCard card = new PaymentCard(50);
-        System.out.println(card);
+        PaymentCard paulsCard = new PaymentCard(20);
+        PaymentCard mattsCard = new PaymentCard(30);
 
-        card.eatAffordably();
-        System.out.println(card);
+        paulsCard.eatHeartily();
 
-        card.eatHeartily();
-        card.eatAffordably();
-        System.out.println(card);
+        mattsCard.eatAffordably();
+
+        System.out.println("Paul: " + paulsCard);
+        System.out.println("Matt: " + mattsCard);
+
+
+        paulsCard.addMoney(20);
+
+        mattsCard.eatHeartily();
+
+        System.out.println("Paul: " + paulsCard);
+        System.out.println("Matt: " + mattsCard);
+
+
+        paulsCard.eatAffordably();
+        paulsCard.eatAffordably();
+
+        mattsCard.addMoney(50);
+
+        System.out.println("Paul: " + paulsCard);
+        System.out.println("Matt: " + mattsCard);
     }
 }
