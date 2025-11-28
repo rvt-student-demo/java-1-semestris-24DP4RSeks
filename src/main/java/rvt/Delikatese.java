@@ -14,6 +14,7 @@ public class Delikatese{
         System.out.println("Rekins: ");
         System.out.println(prece + "    " + cena);
 
+        
         double piegadesCena;
         if (piegade == 1) {
             System.out.println("piegade    " + 3.00);
