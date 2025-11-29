@@ -18,9 +18,11 @@ public class MainProgramStatic {
             
         }
         System.out.println("Sum: " + statistics.sum());
-        
+        System.out.println("Sum of even numbers: " + statistics.even());
+        System.out.println("Sum of odd numbers: " + statistics.odd());
         
         
         
     }
+    
 }
