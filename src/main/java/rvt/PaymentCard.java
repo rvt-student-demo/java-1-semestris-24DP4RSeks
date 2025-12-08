@@ -1,45 +1,33 @@
 package rvt;
 public class PaymentCard {
     private double balance;
-    private final double AFFORDABLE_PRICE = 2.60;
-    private final double HEARTILY_PRICE = 4.60;
-    private final double MAX_BALANCE = 150.0;
 
-    public PaymentCard(double openingBalance) {
-        if (openingBalance > MAX_BALANCE) {
-            this.balance = MAX_BALANCE;
-        } else {
-            this.balance = openingBalance;
-        }
+    public PaymentCard(double balance) {
+        this.balance = balance;
     }
 
-    public String toString() {
-        return "The card has a balance of " + this.balance + " euros";
+    public double balance() {
+        return this.balance;
     }
 
-    public void eatAffordably() {
-        if (this.balance >= AFFORDABLE_PRICE) {
-            this.balance = this.balance - AFFORDABLE_PRICE;
-        }
+    public void addMoney(double increase) {
+        this.balance = this.balance + increase;
     }
 
-    public void eatHeartily() {
-        if (this.balance >= HEARTILY_PRICE) {
-            this.balance = this.balance - HEARTILY_PRICE;
-        }
-    }
-
-    public void addMoney(double amount) {
+    public boolean takeMoney(double amount) {
+        // implement the method so that it only takes money from the card if
+        // the balance is at least the amount parameter.
+        // returns true if successful and false otherwise
         
-        if (amount < 0) {
-            return;
+        if(amount <= this.balance){
+            this.balance = this.balance - amount;
+            return true;
+        }
+        else{
+            return false;
         }
 
         
-        this.balance = this.balance + amount;
-
-        if (this.balance > MAX_BALANCE) {
-            this.balance = MAX_BALANCE;
-        }
+        
     }
 }
