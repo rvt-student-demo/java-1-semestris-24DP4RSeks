@@ -1,21 +1,18 @@
 package rvt;
 public class PaymentTerminal {
-    private double money;  // amount of cash
-    private int affordableMeals; // number of sold affordable meals
-    private int heartyMeals;  // number of sold hearty meals
-
+    private double money;
+    private int affordableMeals;
+    private int heartyMeals;
+    private double affordablePrice = 2.50;
+    private double heartilyPrice = 4.30;
     public PaymentTerminal() {
         this.money = 1000.0;
     }
 
     public double eatAffordably(double payment) {
-        // an affordable meal costs 2.50 euros
-        // increase the amount of cash by the price of an affordable meal and return the change
-        // if the payment parameter is not large enough, no meal is sold and the method should return the whole payment
-
-        double affordablePrice = 2.50;
+        
         double change;
-        if(payment >= 2.50){
+        if(payment >= affordablePrice){
             change = payment - affordablePrice;
             affordableMeals += 1;
             this.money = this.money + (payment - change);
@@ -28,11 +25,7 @@ public class PaymentTerminal {
     }
 
     public double eatHeartily(double payment) {
-        // a hearty meal costs 4.30 euros
-        // increase the amount of cash by the price of a hearty meal and return the change
-        // if the payment parameter is not large enough, no meal is sold and the method should return the whole payment
-
-        double heartilyPrice = 4.30;
+        
         double change;
         if(payment >= 4.30){
             change = payment - heartilyPrice;
@@ -44,6 +37,37 @@ public class PaymentTerminal {
         else{
             return payment;
         }
+    }
+
+    public boolean eatAffordably(PaymentCard card) {
+
+        boolean successful = card.takeMoney(affordablePrice);
+        
+        if(successful){
+            this.affordableMeals += 1;
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public boolean eatHeartily(PaymentCard card) {
+
+        boolean successful = card.takeMoney(heartilyPrice);
+        
+        if(successful){
+            this.heartyMeals += 1;
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public void addMoneyToCard(PaymentCard card, double sum) {
+        card.addMoney(sum);
+        this.money += sum;
     }
 
     public String toString() {
