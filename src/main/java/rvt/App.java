@@ -1,18 +1,21 @@
 package rvt;
-import java.util.Scanner;
+
+import java.util.ArrayList;
+
 public class App {
     public static void main(String[] args) {
-        greet();
-        printtext();
+    ArrayList<Person> persons = new ArrayList<Person>();
+    persons.add(new Teacher("Ada Lovelace", "24 Maddox St. London W1S 2QN", 1200));
+    persons.add(new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028"));
+
+    printPersons(persons);
+    
     }
-    public static void greet() {
-    System.out.println("Greetings from the method world!");
-}
-    public static void printtext() {    
-        Scanner scanner = new Scanner(System.in);
-        int count = Integer.valueOf(scanner.nextLine());
-        for (int i = 0; i < count; i++){
-            System.out.println("In a hole in the ground there lived a method");
+
+
+    public static void printPersons(ArrayList<Person> persons){
+        for (int i = 0; i < persons.size(); i++){
+            System.out.println(persons.get(i));
         }
-}
+    }
 }

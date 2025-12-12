@@ -1,29 +1,24 @@
 package rvt;
 
-public class Student {
+public class Student extends Person {
 
-    private String name;
-    private int age;
-    private int persCode;
-    
-    public String getName(){
+    private int credits;
 
-        return this.name;
-    }
-    public static void main(String[] args) {
-        Student s1 = new Student("John");
-        s1.toString();
-        System.out.println(s1);
+    public Student(String name, String address) {
+        super(name, address);
+        this.credits = 0;
     }
 
-    public void Person(String initialName) {
-        this.age = 0;
-        this.name = initialName;
+    public int study(){
+        return this.credits += 1;
     }
 
-    public Student(String n) {
-        name = n;
+    public int credits(){
+        return this.credits;
     }
 
-    
+    @Override
+    public String toString() {
+        return this.getName() + "\n  " + this.getAddress() + "\n  Study credits " + credits;
+    }
 }
